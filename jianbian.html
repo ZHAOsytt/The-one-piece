@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑白斜条纹渐变方块</title>
+    <style>
+        .stripe-box {
+            width: 800px; 
+            height: 80px; 
+            background: repeating-linear-gradient(
+                -45deg, 
+                black,  
+                black 20px, 
+                white 20px, 
+                white 40px 
+            );
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="stripe-box"></div>
+</body>
+</html>

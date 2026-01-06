@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式图片画廊</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+      body {
+            padding: 60px 20px 20px; 
+            background-color: #f8f8f8;
+        }
+        .gallery-title {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .gallery-container {
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .gallery-item {
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+        }
+        .gallery-img {
+            width: 100%;
+            height: 200px; 
+          background-image: url("./考试图片素材/images/jiqiren01.webp"); 
+            background-size: cover; 
+            background-position: center; 
+        }
+        .gallery-desc {
+            padding: 15px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px; 
+            }
+            .gallery-img {
+                height: 180px; 
+            }
+        }
+        @media (max-width: 500px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .gallery-img {
+                height: 160px;
+            }
+            .gallery-title {
+                font-size: 20px; 
+            }
+        }
+    </style>
+</head>
+<body>
+ 
+    <h2 class="gallery-title">响应式图片相册</h2>
+    <div class="gallery-container"> 
+        <div class="gallery-item">
+            <div class="gallery-img"></div>
+            <div class="gallery-desc">Add a description of the image here</div>
+        </div>
+        <div class="gallery-item">
+            <div class="gallery-img"></div>
+            <div class="gallery-desc">Add a description of the image here</div>
+        </div>
+        <div class="gallery-item">
+            <div class="gallery-img"></div>
+            <div class="gallery-desc">Add a description of the image here</div>
+        </div>
+        <div class="gallery-item">
+            <div class="gallery-img"></div>
+            <div class="gallery-desc">Add a description of the image here</div>
+        </div>
+    </div>
+</body>
+</html>
