@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>百度贴吧 CSS3 翻牌效果</title>
+        <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+        <link rel="stylesheet" type="text/css" href="CSS/rotate.css">
+    </head>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a:link{
+    text-decoration: none;
+}
+
+body{
+        background-color: black;
+}
+h1{
+text-align: center;
+color: white;
+font-size: 50px;
+
+}
+#content{
+        width: 1000px;
+        margin: 50px auto;
+}
+#content ul li{
+        float: left;
+        margin-right: 20px;
+        border: 1px solid white;
+}
+#content ul li a{
+        width: 175px;
+        height: 270px;
+        display: block;
+        position: relative;
+        perspective: 400px;
+}
+#content ul li a div{
+        position: absolute;
+        width: 175px;
+        height: 270px;
+}
+#content ul li a div:first-child{
+        z-index: 1;
+        transition: 0.8s all;
+        transform: rotateY(0);
+        backface-visibility: hidden;
+}
+#content ul li a div:last-child{
+        z-index: -1;
+        backface-visibility: hidden;
+        background-image: url(./考试图片素材/images/bg.jpg);
+        color: aliceblue;
+        transition: 0.8s all;
+        transform: rotateY(-180deg);
+}
+#content ul li a:hover div:first-child{
+        transform: rotateY(180deg);
+        z-index: -1;
+}
+#content ul li a:hover div:last-child{
+        transform:rotateY(0);
+        z-index: 1;
+}
+h3{
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        border-bottom: 1px dashed white;
+}
+p{
+        font-size: 15px;
+        color: black;
+}
+    </style>
+    <body>
+    	<h1>百度贴吧3D翻转</h1>
+        <div id="content">
+        	<ul>
+            	<li>
+                	<a href="#" target="_blank">
+                    	<div><img alt="" src="./考试图片素材/images/jiqiren01.webp"></div>
+                        <div>
+                        	<h3>暗紫先锋</h3>
+                            <p>名为 “暗紫先锋”，以银黑为主色调，点缀亮眼紫霓虹光，眼部与关节科技感拉满，如星际特工，在科幻战场中凭炫酷造型与先锋气场闪耀。
+</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="http://www.w3cfuns.com/" target="_blank">
+                    	<div>
+                        	<img alt="" src="./考试图片素材/images/jiqiren02.webp"/>
+                        </div>
+                        <div>
+                        	<h3>冰蓝卫士</h3>
+                            <p>
+“冰蓝卫士” 通体白灰，冰蓝光带萦绕身躯，设计简洁却充满未来感，似是守护科技基地的哨兵，在冷色调中彰显可靠与精密。
+</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="http://www.w3cfuns.com/" target="_blank">
+                    	<div><img alt="" src="./考试图片素材/images/jiqiren03webp.webp" width="170px"></div>
+                        <div>
+                        	<h3>光轨探长</h3>
+                            <p>
+“光轨探长” 立于霓虹光轨间，白黑机甲搭配蓝橙细节，头部光带如智慧眼眸，仿佛在科幻都市中执行探索与侦查任务，科技感与神秘感并存。
+</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="http://www.w3cfuns.com/" target="_blank">
+                    	<div>
+                        	<img alt="" src="./考试图片素材/images/jiqiren04.webp"/>
+                        </div>
+                        <div>
+                        	<h3>粉甲战匠</h3>
+                            <p>
+“粉甲战匠” 身披白灰战甲，粉紫光效点缀其间，机械结构硬朗且富有设计感，宛如为科幻战役打造的工程战将，在机械美学中展现力量与灵动。</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单示例</title>
+    <style>
+        form {
+            width: 500px;
+            margin: 20px;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .form-group label {
+            width: 80px;
+            text-align: right;
+            margin-right: 10px;
+        }
+        .required {
+            color: red;
+            margin-left: 2px;
+        }
+        .form-control {
+            padding: 5px;
+            width: 200px;
+        }
+        .option-group {
+            display: flex;
+            gap: 15px;
+        }
+        .form-group textarea {
+            padding: 5px;
+            width: 200px;
+            height: 80px;
+            resize: vertical;
+        }
+        .submit-btn {
+            margin-left: 90px;
+            padding: 6px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <!-- 姓名 -->
+        <div class="form-group">
+            <label>姓名：</label>
+            <input type="text" class="form-control" required>
+            <span class="required">*</span>
+            <span>（此项不能为空）</span>
+        </div>
+
+       
+        <div class="form-group">
+            <label>密码：</label>
+            <input type="password" class="form-control" required>
+            <span class="required">*</span>
+            <span>（此项不能为空）</span>
+        </div>
+
+        <div class="form-group">
+            <label>性别：</label>
+            <div class="option-group">
+                <label><input type="radio" name="gender" value="male"> 男</label>
+                <label><input type="radio" name="gender" value="female"> 女</label>
+                <label><input type="radio" name="gender" value="other"> 其他</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>是否接受通知：</label>
+            <div class="option-group">
+                <label><input type="checkbox" name="notice" value="day"> 白天接受</label>
+                <label><input type="checkbox" name="notice" value="night"> 夜晚接受</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>收货地址：</label>
+            <select class="form-control">
+                <option>邢台</option>
+                <option>北京</option>
+                <option>上海</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>详细地址：</label>
+            <textarea placeholder="请输入你的具体地址到门牌号，如：xxxx小区2-3-106"></textarea>
+        </div>
+        <div class="form-group">
+            <label>日期</label>
+            <input type="date" class="form-control">
+        </div>
+        <button type="submit" class="submit-btn">确认提交</button>
+    </form>
+</body>
+</html>
