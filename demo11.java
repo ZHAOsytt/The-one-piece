@@ -95,11 +95,11 @@ public class TestTriangle {
         Scanner scanner = new Scanner(System.in);
         Triangle triangle = new Triangle();
         while (true) {
-            System.out.print("请输入三角形的第一条边：");
+            System.out.print("shu ru first bian");
             double a = scanner.nextDouble();
-            System.out.print("请输入三角形的第二条边：");
+            System.out.print("shu ru second bian");
             double b = scanner.nextDouble();
-            System.out.print("请输入三角形的第三条边：");
+            System.out.print("shu ru third  bian");
             double c = scanner.nextDouble();
 
             triangle.setA(a);
@@ -113,17 +113,18 @@ public class TestTriangle {
             }
         }
         scanner.nextLine();
-        System.out.print("请输入三角形的颜色color：");
+        System.out.print(" input color：");
         String color = scanner.nextLine();
         triangle.setColor(color);
-        System.out.print("请输入是否填充（true/false）：");
+        System.out.print("yao bu yao tian chong （true/false）：");
         boolean filled = scanner.nextBoolean();
         triangle.setFilled(filled);
         System.out.println("\n" + triangle.toString());
         if (triangle.isFilled()) {
-            System.out.println("三角颜色color：" + triangle.getColor());
+            System.out.println("color：" + triangle.getColor());
         }
 
         scanner.close();
     }
+
 }
